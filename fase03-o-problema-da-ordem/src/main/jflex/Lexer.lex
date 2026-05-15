@@ -57,11 +57,11 @@ OversizedIdentifier = {Letter}({Letter}|{Digit}|_){32,}
     "while"         { return symbol(sym.WHILE); }
 
     /* TODO 4: Pontuação ( ) { } ; */
-    \(              { return symbol(sym.LPAREN); }
-    \)              { return symbol(sym.RPAREN); }
-    \{              { return symbol(sym.LBRACE); }
-    \}              { return symbol(sym.RBRACE); }
-    \;              { return symbol(sym.SEMI); }
+    "("             { return symbol(sym.LPAREN); }
+    ")"             { return symbol(sym.RPAREN); }
+    "{"             { return symbol(sym.LBRACE); }
+    "}"             { return symbol(sym.RBRACE); }
+    ";"             { return symbol(sym.SEMI); }
 
     /* TODO 5: Operadores de Atribuição e Relacionais (=, ==, !=, <, >, <=, >=) */
     /* CUIDADO COM A ORDEM! O JFlex casa a regra que aparece primeiro se houver empate de tamanho. */
